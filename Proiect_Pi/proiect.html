@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Pisici - Social Feed</title>
+    <link rel="icon" type="image/png" href="poza1.png">
+    
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #e7dfd8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background: #ffbd59; 
+            border-radius: 0 0 10px 10px; 
+            font-family: Calibri, sans-serif; 
+            padding: 10px 40px;
+            width: 100%;
+        }
+
+        .navdiv {
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-family: 'Times New Roman', serif;
+            font-size: 50px; 
+            font-weight: 700; 
+            color: black;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        li a {
+            color: black; 
+            font-size: 25px; 
+            font-family: 'Times New Roman', serif;
+            font-weight: bold; 
+            margin-left: 30px;
+        }
+
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+            padding-top: 20px;
+        }
+
+        .stanga {
+            flex: 2;
+            background-color: #ffbd59;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            border-radius: 0 20px 20px 0;
+            justify-content: flex-start;
+        }
+
+        .pisica-laptop {
+            position: static;
+            width: 200px; 
+            display: block;
+            margin-left:0px;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        #sectiune-adaugare {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px dashed #8b5e1a;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        .ascuns{
+            display: none !important;
+        }
+
+        .textT {
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid black;
+            width: 100%;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+        }
+
+        .cadruImagine {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .imagine-label {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .butonPosteaza {
+            padding: 12px 20px;
+            background-color: #fff6c9;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .butonPosteaza:hover {
+            background-color: white;
+            box-shadow: 3px 3px 0px black;
+        }
+
+        .dreapta {
+            width: 350px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .lista-articole {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #fff6c9;
+            border: 2px solid black;
+            box-shadow: 5px 5px 0px #000;
+        }
+
+        .lista-articole h2 a {
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .lista_postari {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .card-postare {
+            background: white;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 5px 5px 0px #000;
+        }
+
+        .poza-postare {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head> 
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Pisici</a></div>
+            <ul>
+                <li><a href="proiect.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="robot.html">Robot</a></li>
+                <li><a href="cont.html">Cont</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="stanga">
+            <img src="poza5.png" class="pisica-laptop">
+            
+            <div id="sectiune-adaugare" class="sectiune-adaugare ascuns">
+                <h3>Scrie o postare nouă:</h3>
+                <textarea id="text-postare" placeholder="La ce te gândești?" rows="3" class="textT"></textarea>
+
+                <div class="cadruImagine">
+                    <label for="imagine-postare" class="imagine-label">Adaugă o imagine (opțional)</label>
+                    <input type="file" id="imagine-postare" accept="image/*">
+                </div>
+                <button id="btn-posteaza" class="butonPosteaza">POSTEAZĂ</button>
+            </div> 
+
+            <div id="lista-postari" class="lista_postari">
+                </div>
+        </div>
+
+        <div class="dreapta">
+            <div class="lista-articole">
+                <img src="poza6.png" width="120" >
+                <h2><a href="carti.html">CĂRȚI</a></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="proiect.js"></script>
+</body>
+</html>

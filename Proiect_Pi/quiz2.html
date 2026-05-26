@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Quiz - Ce pisica ți se potrivește?</title>
+    <link rel="icon" type="image/png" href="poza1.png">
+    <style>
+    
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e7dfd8;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .navbar {
+            background: #ffbd59; 
+            border-radius: 10px; 
+            font-family: calibri; 
+            padding: 10px 15px;
+            margin: 10px;
+        }
+
+        .navdiv {
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 50px; 
+            font-weight: 700; 
+            color: black;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        li a {
+            color: black; 
+            font-size: 25px; 
+            font-family: 'Times New Roman';
+            font-weight: bold; 
+            margin-right: 40px;
+        }
+
+        .titlu-pagina {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 45px;
+        }
+
+           .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;           
+          
+            width: 100%;
+            min-height: calc(100vh - 120px);
+
+        }
+        
+        .centru{
+            background-color: #FFE4B5;
+            width: 800px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            transform: translateY(-20px);
+        }
+
+        .bt-next{
+            display: block;
+            width: 200px;
+            margin: 30px auto 0 auto;
+            padding: 15px;
+            cursor: pointer;
+            background-color: black;
+            color:white;
+            border: none;
+            font-size: 18px;
+            transition: 0.3s;
+            border-radius: 15px;
+        }
+
+        .intrebare-quiz{
+            font-size: 26px;
+            font-weight: bold;
+            color: black;
+            display: block;
+            padding-bottom: 25px;
+            text-align: center
+        }
+
+        .centru label{
+            display: block;
+            margin-bottom: 15px;
+            background-color:#ffffff;
+            border-radius: 15px;
+            border: 2px solid #ffe7c2;
+            font-size: 20px;
+            color: black;
+            padding: 15px 25px;
+            cursor: pointer;
+        }
+
+        .pas-quiz{
+            display:none;
+        }
+
+        .pas-quiz.activ{
+            display: block;
+        }
+
+        #output {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    </style>
+<style>
+     body {
+            background-color: #e7dfd8;
+        }
+</style>
+</head>
+
+
+<body>
+      <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Pisici</a> </div>
+            <ul>
+                <li><a href="proiect.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="robot.html">Robot</a></li>
+                <li><a href="cont.html">Cont</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="container">
+             <div class="centru">
+                <div id="quiz">
+
+                        <div class="pas-quiz activ">
+                            <p class="intrebare-quiz"> Cum preferi să-ți petreci după-amiaza de duminică?</p>
+                            <label><input type="radio" name="q1" value="Abisiniana"> Mergând la o petrecere sau ieșind cu prietenii.</label>
+                            <label><input type="radio" name="q1" value="Siameză"> Jucând un joc video sau făcând ceva interactiv.</label>
+                            <label><input type="radio" name="q1" value="Russian_Blue"> Citind o carte într-un colț liniștit.</label>
+                            <label><input type="radio" name="q1" value="MaineCoon"> Dormind pe canapea, fără nicio grijă.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">2. Dacă ai fi la o petrecere unde nu cunoști pe nimeni, ce ai face?</p>
+                            <label><input type="radio" name="q2" value="Abisiniana"> M-aș băga în seamă cu toată lumea.</label>
+                            <label><input type="radio" name="q2" value="Siameză"> Aș căuta ringul de dans sau ceva de făcut.</label>
+                            <label><input type="radio" name="q2" value="Russian_Blue"> Aș sta la masa mea și aș observa discret</label>
+                            <label><input type="radio" name="q2" value="MaineCoon"> Aș căuta barul sau mâncarea și m-aș relaxa.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">3. Ce tip de prieten ești tu în grup?</p>
+                            <label><input type="radio" name="q3" value="Abisiniana"> Cel care face mereu glume și e în centrul atenției.</label>
+                            <label><input type="radio" name="q3" value="Siameză"> Cel care organizează toate activitățile și excursiile.</label>
+                            <label><input type="radio" name="q3" value="Russian_Blue"> Cel care preferă discuțiile 1 la 1, nu în grup mare.</label>
+                            <label><input type="radio" name="q3" value="MaineCoon"> Cel care ascultă și oferă sfaturi calme.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">4. Cum reacționezi când se schimbă planurile în ultimul moment?</p>
+                            <label><input type="radio" name="q4" value="Abisiniana"> Nu mă deranjează, mă adaptez oriunde e lume multă</label>
+                            <label><input type="radio" name="q4" value="Siameză"> Super! Îmi place surpriza, hai să facem altceva!</label>
+                            <label><input type="radio" name="q4" value="Russian_Blue"> Mă stresez puțin, preferam planul inițial.</label>
+                            <label><input type="radio" name="q4" value="MaineCoon"> Ridic din umeri și mă culc la loc.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">5. Care este nivelul tău de energie într-o zi obișnuită?</p>
+                            <label><input type="radio" name="q5" value="Abisiniana"> Depinde de cine e în jurul meu; mă încarc de la oameni.</label>
+                            <label><input type="radio" name="q5" value="Siameză"> Foarte ridicat, nu pot sta locului o secundă.</label>
+                            <label><input type="radio" name="q5" value="Russian_Blue"> Mai degrabă scăzut, am nevoie de mult timp singur.</label>
+                            <label><input type="radio" name="q5" value="MaineCoon"> Constant, sunt o prezență liniștită.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">6. Ce fel de decor preferi pentru casa ta?</p>
+                             <label><input type="radio" name="q6" value="Abisiniana"> Colorat, plin de decorațiuni și amintiri de la prieteni.</label>
+                            <label><input type="radio" name="q6" value="Siameză"> Modern, cu gadget-uri și spațiu de mișcare.</label>
+                            <label><input type="radio" name="q6" value="Russian_Blue"> Minimalist, curat și foarte ordonat.</label>
+                            <label><input type="radio" name="q6" value="MaineCoon"> Confortabil, cu multe perne, pături și canapele mari.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">7. Cum arată vacanța ta ideală?</p>
+                             <label><input type="radio" name="q7" value="Abisiniana"> Un oraș aglomerat, cu multe cluburi și evenimente.</label>
+                            <label><input type="radio" name="q7" value="Siameză"> O expediție pe munte sau sporturi extreme.</label>
+                            <label><input type="radio" name="q7" value="Russian_Blue"> O cabană izolată în pădure</label>
+                            <label><input type="radio" name="q7" value="MaineCoon"> Un resort all-inclusive unde nu trebuie să mișc un deget.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">8. Când ai o problemă, cum o rezolvi?</p>
+                             <label><input type="radio" name="q8" value="Abisiniana"> Vorbesc cu toată lumea despre ea până găsesc o soluție.</label>
+                            <label><input type="radio" name="q8" value="Siameză"> Trec imediat la acțiune, încerc zece variante deodată.</label>
+                            <label><input type="radio" name="q8" value="Russian_Blue"> O analizez singur, în liniște, până o înțeleg.</label>
+                            <label><input type="radio" name="q8" value="MaineCoon"> O las să treacă de la sine, nu mă enervez degeaba.</label>
+                        </div>
+
+                        <div class="pas-quiz">
+                            <p class="intrebare-quiz">9. Ce cauți la un partener (sau prieten cel mai bun)?</p>
+                             <label><input type="radio" name="q9" value="Abisiniana"> Să fie sufletul petrecerii.</label>
+                            <label><input type="radio" name="q9" value="Siameză"> Să fie mereu gata de aventură.</label>
+                            <label><input type="radio" name="q9" value="Russian_Blue"> Să fie loial și să mă înțeleagă fără cuvinte.</label>
+                            <label><input type="radio" name="q9" value="MaineCoon"> Să fie calm și să îmi ofere stabilitate.</label>
+                        </div>
+                    </div>
+
+                        <button id="rezultat" class="bt-next">Next</button>
+                        <div id="output"></div>
+
+             </div>
+        </div>
+    </nav>
+<script src="quiz2.js"></script>
+</body>
+
+</html>
